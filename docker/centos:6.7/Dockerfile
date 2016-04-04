@@ -13,6 +13,7 @@ gpgkey=http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco\n' >> /etc/yum.repos.
     cyrus-sasl-devel \
     cyrus-sasl-md5 \
     devtoolset-3-gcc \
+    devtoolset-3-gcc-c++ \
     git \
     java-1.8.0-openjdk-devel \
     libcurl-devel \
