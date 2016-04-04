@@ -19,6 +19,7 @@ gpgkey=http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco\n' >> /etc/yum.repos.
     maven30 \
     nss \
     openssl-devel \
+    patch \
     python-devel \
     ruby-devel \
     rubygems \
