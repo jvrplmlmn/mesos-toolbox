@@ -183,8 +183,9 @@ def show_sources(kind):
                         full_path )
 
 def op_remove_mesos_sources():
-    # TODO: implement
-    return False
+    if not Utils.confirm("You are about to remove Mesos sources ({}).".format(MesosConfig.source_dir())):
+        exit(0)
+    Utils.cmd("rm -rf {}".format(MesosConfig.source_dir()))
 
 def op_remove_packaging_sources():
     # TODO: implement
