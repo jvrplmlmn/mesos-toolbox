@@ -30,7 +30,10 @@ gpgkey=http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco\n' >> /etc/yum.repos.
     wget \
     zlib-devel \
   && source scl_source enable devtoolset-3 \
-  && gem install fpm --no-ri --no-rdoc -V
+  && gem install fpm --no-ri --no-rdoc -V \
+  && echo -e '\n\
+source /opt/rh/devtoolset-3/enable\n\
+source /opt/rh/maven30/enable\n' >> /etc/bashrc
 
-ENV PATH /opt/rh/maven30/root/usr/bin:/opt/rh/devtoolset-3/root/usr/bin${PATH:+:${PATH}}
-ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk
+
+ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk.x86_64
